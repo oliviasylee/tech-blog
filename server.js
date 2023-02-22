@@ -6,7 +6,7 @@ const routes = require('./controllers'); // Router
 const exphbs = require('express-handlebars'); // View - Initiate express handlebars
 const hbs = exphbs.create({}); // Handlebar object
 const sequelize = require('./config/connection'); // Connect to a database
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store); // Initializes Sequelize with session store
 
 // Sets up the Express App - Initialize the Express app
 const app = express();
@@ -15,14 +15,17 @@ const PORT = process.env.PORT || 3001;
 // Set up sessions - something you want to encrypt
 const sess = {
     secret: process.env.SECRET,
-    cookie: {},
+    cookie: {
+      maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
+    },
     resave: false,
     saveUninitialized: true,
+      // Connect sequilize defendencies
     store: new SequelizeStore({
       db: sequelize
     })
   };
-// use sessions as middleware
+// Use sessions as middleware
 app.use(session(sess));
 
 // Set up the Handlebars view engine - define Handlebars as the default template engine
