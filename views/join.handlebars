@@ -1,1 +1,39 @@
-{{!-- join --}}
+<div class="container form-card">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-white text-dark" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="joincard mb-md-5 mt-md-4 pb-5">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Create Account</h2>
+              <p class="text-dark-50 mb-5">Already have an account? <a class="nav-link text-dark-50 fw-bold selected-nav-link" href="/login"><u>Log in</a></u></p>
+              <form class="signUp">
+              <div class="form-outline form-dark mb-4">
+                <input type="name" id="typeNameX" class="form-control form-control-lg" maxlength="30" required>
+                <label class="form-label" for="typeNameX">*Name</label>
+              </div>
+
+              <div class="form-outline form-dark mb-4">
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" required>
+                <label class="form-label" for="typeEmailX">*Email</label>
+              </div>
+
+              <div class="form-outline form-dark mb-4">
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                <label class="form-label" for="typePasswordX">*Password</label>
+               <div class="input-note">*Min. length 8 characters, must contain at least one lowercase character, one uppercase and one number.</div>
+              </div>
+
+              <button class="btn btn-outline-dark btn-dark text-white btn-lg px-5" type="submit">Create Account</button>
+              </form>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{!-- 
+<script src="/js/join.js"></script> --}}
