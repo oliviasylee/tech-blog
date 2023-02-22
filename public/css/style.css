@@ -23,6 +23,23 @@ body {
   
 }
 
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-nav a,
+.navbar-nav .active a {
+  color: white;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+a:hover {
+  color: white;
+}
+
 .btn {
   background-color: #F2EDDC;
   color: black;

@@ -17,11 +17,32 @@
 
   <body>
     <nav class="navbar">
-      <h1><a class="navbar-brand px-3" href="/"><i class="fa-solid fa-clipboard-list"></i> The Tech Blog </a></h1>
-      <div class="icons">
-        <i class="fa-solid fa-floppy-disk text-light save-note"></i>
-        <i class="fa-solid fa-plus text-light new-note"></i>
-      </div>
+      <h1><a class="navbar-brand px-3" href="/"><i class="fa-solid fa-pen-to-square"></i> The Tech Blog </a></h1>
+      <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+          <li class="nav-item text-light active">
+            <a class="nav-link selected-nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link me-lg-3" href="/dashboard">Dashboard</a></li>
+                        
+        {{#if logged_in}}
+            <li class="nav-item logout">
+                <a class="nav-link" id="log-in-out">Log out</a>
+            </li>
+            {{else}}
+            <li class="nav-item login">
+              <a class="nav-link selected-nav-link" href="/login">Log in</a>
+            </li>
+            <li class="nav-item join">
+              <a class="nav-link selected-nav-link" href="/join">Join</a>
+            </li>
+        {{/if}}
+      </ul>
+                    
+
+
+
+
+
     </nav>
     
     {{!-- <script src="/assets/js/index.js"></script> --}}
