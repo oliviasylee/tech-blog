@@ -5,8 +5,16 @@ router.get('/', async(req, res) => {
     res.render('home');
 });
 
+router.get('/dashboard', async(req, res) => {
+    res.render('dashboard');
+});
+
+router.get('/login', async(req, res) => {
+    res.render('login');
+});
+
+
 router.get('/join', async(req, res) => {
-    console.log('join route called');
     res.render('join');
 });
 
