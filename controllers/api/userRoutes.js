@@ -10,14 +10,16 @@ router.post('/', async (req, res) => {
         password: req.body.password,
       });
   
+      console.log("User data:", userData);
+
       req.session.save(() => {
         req.session.loggedIn = true;
-  
+        console.log("Session saved.");
         res.status(200).json(userData);
       });
     } catch (err) {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500).json({ message: 'Failed to create user' });
     }
   });
 
