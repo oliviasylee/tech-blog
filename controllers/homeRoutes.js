@@ -26,8 +26,28 @@ router.get('/', async(req, res) => {
     }
 });
 
+// Dashboard route
 router.get('/dashboard', async(req, res) => {
-    res.render('dashboard');
+    if(!req.session.logged_in){
+        res.redirect('/login')
+    }else {
+        try {
+            const dbUser = await User.findByPk(req.session.user_id, {
+            attributes: [
+                `id`,
+                `username`,
+                `email`,
+            ],
+        });
+        const user = dbUser.get({ plain: true });
+        res.render('dashboard', {
+            user,
+            logged_in: req.session.logged_in, })
+        } catch (err) {
+            console.log(err)
+            res.status(500).json(err)
+        }
+    }
 });
 
 // Login route
