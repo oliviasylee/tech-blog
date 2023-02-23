@@ -12,13 +12,23 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        comment_username: {
-
-
+        author_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
         },
         date_created: {
-
-
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'post',
+              key: 'id',
+            },
         },
     },
     {

@@ -43,6 +43,7 @@ User.init(
                 return newData
             },
         },
+        //  properties that can be added to models to automatically track the creation and update times of each instance of the model.
         sequelize,
         timestamps: false,
         freezeTableName: true,
