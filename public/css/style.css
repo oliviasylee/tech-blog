@@ -21,7 +21,6 @@ body {
   display: inline-block;
   border-radius: .4rem;
   box-shadow: 6px 5px #cccccc;
-  
 }
 
 .navbar-nav {
@@ -40,11 +39,13 @@ body {
   color: white;
 }
 
+/* Log in, Join css */
 .btn {
   background-color: #F2EDDC;
   color: black;
   padding: 6px 5px;
   margin: 5px 0;
+  margin-top: 40px;
   font-size: 1.3rem;
   text-decoration:none;
   width: 100%;
@@ -88,4 +89,55 @@ color: #FAF9F6;
 background-color:  #788585;
 transform: translate(0, 0);
 box-shadow: 2px 2px #1f203a;
+}
+
+/* Join form */
+.container {
+  vertical-align: middle;
+  display: grid;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+}
+
+.form-card {
+ margin: 0 auto;
+}
+
+.card {
+ height: 100%;
+ margin-top: 50px;
+ margin-bottom: 50px;
+
+}
+
+.form-outline .form-control {
+  border: 1px solid #ddd;
+  min-height: auto;
+  padding: 0.32rem 0.75rem;
+  background: transparent;
+  transition: all .2s linear;
+}
+
+/* Dashboard css */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25%;
+}
+
+.btn-new-post {
+  background-color: #F2EDDC;
+  color: black;
+  padding: 6px 5px;
+  margin: 5px 0;
+  font-size: 1.3rem;
+  text-decoration:none;
+  width: 20%;
+  display: block;
+  border-radius: .4rem;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px #1f203a;
+  transform: translate(-1px, -1px);
 }
