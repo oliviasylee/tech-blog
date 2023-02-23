@@ -24,9 +24,11 @@
             <a class="nav-link selected-nav-link" href="/">Home</a>
           </li>
            {{#if logged_in}}
-          <li class="nav-item"><a class="nav-link me-lg-3" href="/dashboard">Dashboard</a></li>
+            <li class="nav-item">
+              <a class="nav-link me-lg-3" href="/dashboard">Dashboard</a>
+            </li>
             <li class="nav-item logout">
-                <a class="nav-link" id="log-in-out">Log out</a>
+              <a class="nav-link" id="log-in-out">Log out</a>
             </li>
             {{else}}
             <li class="nav-item login">
