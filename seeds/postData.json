@@ -2,8 +2,14 @@
     {
       "id": 1,
       "title": "MVC",
-      "contents": "Model-View-Controller Pattern",
-      "author_id": 1
+      "contents": "a pattern in software design commonly used to implement user interfaces, data, and controlling logic.",
+      "user_id": 1
+    },
+    {
+      "id": 2,
+      "title": "Object-oriented programming (OOP)",
+      "contents": "a computer programming model that organizes software design around data, or objects, rather than functions and logic.",
+      "user_id": 1
     }
   ]
   

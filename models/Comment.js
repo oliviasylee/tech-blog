@@ -12,7 +12,7 @@ Comment.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        author_id: {
+        user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',

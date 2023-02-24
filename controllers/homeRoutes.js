@@ -2,8 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// 홈페이지에서 렌더링되는 라우트
-// 홈라우트를 설정해야 로그인하면 네브바가 변경되는 것을 설정
+// Get all posts
 router.get('/', async(req, res) => {
         try {
             const postData = await Post.findAll({
@@ -16,13 +15,14 @@ router.get('/', async(req, res) => {
                     //   attributes: ['content', 'date_created'],
                     //   as: 'comments' 
                     // }
-                  ]
-        })
+                  ],
+        });
         const posts = postData.map(post => post.get({ plain: true }));
+        console.log(posts);
         
         res.render('home', {
             posts,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in,
     });
         } catch (err) {
             console.log(err)

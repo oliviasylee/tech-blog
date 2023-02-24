@@ -7,7 +7,6 @@ body {
   background-color: #FAF9F6;
 }
 
-
 .navbar {
   padding: 3% 4%;
   background-color: #1f203a;
@@ -33,10 +32,12 @@ body {
   color: white;
   padding: 0 2rem;
   font-size: 1.5rem;
+  padding: 10px 20px;  
 }
 
 .navbar-nav a:hover {
   color: white;
+  border-bottom: 3px solid white;
 }
 
 /* Log in, Join css */
@@ -139,4 +140,11 @@ box-shadow: 2px 2px #1f203a;
   outline: none;
   box-shadow: 3px 3px #1f203a;
   transform: translate(-1px, -1px);
+}
+
+/* home css */
+a {
+  display: block;
+  color: black;
+  text-decoration: none;
 }
