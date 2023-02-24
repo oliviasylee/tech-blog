@@ -2,11 +2,12 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
+// 홈페이지에서 렌더링되는 라우트
 // 홈라우트를 설정해야 로그인하면 네브바가 변경되는 것을 설정
 router.get('/', async(req, res) => {
     if(!req.session.logged_in){
         res.redirect('/login')
-    }else {
+    } else {
         try {
             const dbUser = await User.findByPk(req.session.user_id, {
             attributes: [
@@ -30,7 +31,7 @@ router.get('/', async(req, res) => {
 router.get('/dashboard', async(req, res) => {
     if(!req.session.logged_in){
         res.redirect('/login')
-    }else {
+    } else {
         try {
             const dbUser = await User.findByPk(req.session.user_id, {
             attributes: [
@@ -61,8 +62,13 @@ router.get('/login', async(req, res) => {
     res.render('login');
 });
 
+// Join route
 router.get('/join', async(req, res) => {
-    res.render('join');
-});
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+      }
+      res.render('join');
+    });
 
 module.exports = router;

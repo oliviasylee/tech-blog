@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // changed dashboard to /
-        document.location.replace('/');
+        document.location.replace('/dashboard');
       } else {
         alert('Failed to log in.');
       }

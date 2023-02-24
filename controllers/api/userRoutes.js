@@ -1,27 +1,40 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// user에게 인풋받는 라우트
 // CREATE new user
 router.post('/', async (req, res) => {
-    try {
-      const userData = await User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password,
-      });
-  
-      console.log("User data:", userData);
+  try {
+    const userData = await User.create(req.body);
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
 
-      req.session.save(() => {
-        req.session.logged_in = true;
-        console.log("Session saved.");
-        res.status(200).json(userData);
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json({ message: 'Failed to create user' });
-    }
-  });
+      res.status(200).json(userData);
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
+  //   try {
+  //     const userData = await User.create({
+  //       username: req.body.username,
+  //       email: req.body.email,
+  //       password: req.body.password,
+  //     });
+  
+  //     console.log("User data:", userData);
+
+  //     req.session.save(() => {
+  //       req.session.logged_in = true;
+  //       console.log("Session saved.");
+      // res.redirect('/login');
+  //     });
+  //   } catch (err) {
+  //     console.log(err);
+  //     res.status(500).json({ message: 'Failed to create user' });
+  //   }
+  // });
 
 // Login
 router.post('/login', async (req, res) => {

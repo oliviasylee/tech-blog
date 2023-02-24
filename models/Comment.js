@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class Comment extends Model {}
 
-// comment, the comment creator’s username, and the date created
+// Comment, the comment creator’s username, and the date created
 Comment.init(
     {  
         id: {
