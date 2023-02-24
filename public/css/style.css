@@ -92,13 +92,13 @@ box-shadow: 2px 2px #1f203a;
 }
 
 /* Join form */
-.container {
+/* .container {
   vertical-align: middle;
   display: grid;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
-}
+} */
 
 .form-card {
  margin: 0 auto;
@@ -108,7 +108,6 @@ box-shadow: 2px 2px #1f203a;
  height: 100%;
  margin-top: 50px;
  margin-bottom: 50px;
-
 }
 
 .form-outline .form-control {

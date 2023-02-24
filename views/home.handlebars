@@ -1,1 +1,17 @@
 {{!-- home.handlebars --}}
+{{!-- post / helper code(posted by) here 
+format_date --}}
+
+<div class="container">
+  {{#each posts as |post|}}
+<div class="card">
+  <div class="card-header">
+    {{post.title}} Posted by {{post.author_id}} on {{format_date}}
+  </div>
+  <div class="card-body">
+    {{post.contents}}
+
+  </div>
+</div>
+{{/each}}
+</div>

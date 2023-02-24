@@ -27,10 +27,10 @@ Post.init(
                 key: 'id',
             },
         },
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
+        // date_created: {
+        //     type: DataTypes.DATE,
+        //     allowNull: false,
+        // },
     },
     {
         sequelize,
