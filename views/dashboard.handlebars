@@ -1,3 +1,26 @@
+<div class="container welcome">
+  <div class="col-auto  ">
+    <h4>Welcome, {{user.username}}!</h4>
+  </div>
+  <header class="hero">
+    <h1 class="app-title"><a href="/dashboard">Your Posts</a></h1>
+  </header>
+</div>
+
+<div class="container">
+  {{#each posts as |post|}}
+<div class="card">
+  <div class="card-header">
+    <h3><a href="/posts/{{id}}">{{post.title}}</a></h3>
+  </div>
+  <div class="card-body">
+    <h5>{{post.contents}}</h5>
+    <br>Posted by {{user.username}} on {{format_date createdAt}}
+  </div>
+</div>
+{{/each}}
+</div>
+
 <div class="flex-container">
  <button class="btn-new-post btn-outline-dark btn-dark btn-lg px-5" type="submit"><i class="fa-solid fa-plus"></i> New Post</button>
 </div>

@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// user에게 인풋받는 라우트
 // CREATE new user
 router.post('/', async (req, res) => {
   try {
@@ -36,7 +35,7 @@ router.post('/', async (req, res) => {
   //   }
   // });
 
-// Login
+// Login route
 router.post('/login', async (req, res) => {
   try {
       // Find the user who matches the posted e-mail address
@@ -78,11 +77,11 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Logout -> destory user session
+// Logout route
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
    
-    // Remove the session variables
+    // destory user session
     req.session.destroy(() => {
       res.status(204).end();
     });

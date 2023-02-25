@@ -123,7 +123,7 @@ box-shadow: 2px 2px #1f203a;
 .flex-container {
     display: flex;
     justify-content: center;
-    margin-top: 25%;
+    margin-top: 5%;
 }
 
 .btn-new-post {
@@ -140,6 +140,10 @@ box-shadow: 2px 2px #1f203a;
   outline: none;
   box-shadow: 3px 3px #1f203a;
   transform: translate(-1px, -1px);
+}
+
+.welcome {
+  margin-top: 50px;
 }
 
 /* home css */

@@ -5,8 +5,8 @@
     <h3><a href="/posts/{{id}}">{{post.title}}</a></h3>
   </div>
   <div class="card-body">
-    {{post.contents}}
-    <br><br>Posted by {{user.username}} on {{format_date createdAt}}
+    <h5>{{post.contents}}</h5>
+    <br>Posted by {{user.username}} on {{format_date createdAt}}
   </div>
 </div>
 {{/each}}
