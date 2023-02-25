@@ -1,13 +1,13 @@
 <div class="container">
-  {{#each posts as |post|}}
-<div class="card">
-  <div class="card-header">
-    <h3><a href="/posts/{{id}}">{{post.title}}</a></h3>
+    {{#each posts as |post|}}
+  <div class="card">
+    <div class="card-header">
+      <h3><a href="/posts/{{id}}">{{post.title}}</a></h3>
+    </div>
+    <div class="card-body">
+      <h5>{{post.contents}}</h5>
+      <br>Posted by {{user.username}} on {{format_date createdAt}}
+    </div>
   </div>
-  <div class="card-body">
-    <h5>{{post.contents}}</h5>
-    <br>Posted by {{user.username}} on {{format_date createdAt}}
-  </div>
-</div>
-{{/each}}
+  {{/each}}
 </div>
