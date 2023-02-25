@@ -1,21 +1,21 @@
-{{!-- post / helper code(posted by) here 
-format_date --}}
 <div class="container new-post">
   <div class="card">
     <div class="card-header">
     <h3> Create New Post</h3>
     </div>
     <div class="card-body">
-      <div class="form-group">
-          <label for="exampleFormControlTextarea1"><h5>Title</h5></label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-      </div>
-      <br>
-      <div class="form-group">
-          <label for="exampleFormControlTextarea1"><h5>Contents</h5></label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    <button class="btn btn-outline-dark btn-dark btn-lg px-5" type="submit">Create</button>
+      <form class="newPost">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"><h5>Title</h5></label>
+            <textarea class="form-control" id="typeTitle" rows="1"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1"><h5>Contents</h5></label>
+            <textarea class="form-control" id="typeContents" rows="3"></textarea>
+        </div>
+          <button class="btn btn-outline-dark btn-dark btn-lg px-5" type="submit">Create</button>
+      </form>
     </div>
   </div>
 </div>
