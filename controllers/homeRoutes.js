@@ -11,10 +11,9 @@ router.get('/', async(req, res) => {
                       model: User, 
                       attributes: ['username']
                     },
-                    // { model: Comment, 
-                    //   attributes: ['content', 'date_created'],
-                    //   as: 'comments' 
-                    // }
+                    { model: Comment, 
+                      attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at']
+                    }
                   ],
         });
         const posts = postData.map(post => post.get({ plain: true }));

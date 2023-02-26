@@ -83,7 +83,6 @@ router.get('/newpost', withAuth, async (req, res) => {
         const posts = postData.map(post => post.get({ plain: true }));
         console.log(posts);
 
-        // loggedIn -> logged_in
         res.render('newpost', { posts, logged_in: true });
     
     } catch (err) {
