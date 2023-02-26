@@ -3,6 +3,16 @@
         "comment": "Great",
         "user_id": 1,
         "post_id": 1
+    },
+    {
+        "comment": "Nice",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "comment": "Great",
+        "user_id": 2,
+        "post_id": 3
     }
   ]
   

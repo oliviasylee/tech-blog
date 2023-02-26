@@ -1,4 +1,5 @@
 {{> post-info post}}
+{{> comments post.comments}}
 
 {{#if logged_in}}
 <div class="container">
@@ -18,7 +19,7 @@
 </div>
 {{/if}}
 
-{{> comments post.comment}}
+
 
 {{#if logged_in}}
 <script src="/js/comment.js"></script>
