@@ -1,5 +1,5 @@
 <div class="container welcome">
-  <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between your-posts">
   <div class="col-auto">
     <h4>Welcome back, {{user.username}}!</h4>
   <header>
@@ -30,12 +30,12 @@
 
 <div class="container welcome">
 <header>
-    <h1><a href="/dashboard">Your Comments</a></h1>
+    <h1 class="your-comments"><a href="/dashboard">Your Comments</a></h1>
   </header>
 </div>
 
 {{!-- Your commnets --}}
-<div class="container">
+<div class="container your-comments-card">
   {{#each comments as |comment|}}
     <div class="card"> 
       <div class="card-body">

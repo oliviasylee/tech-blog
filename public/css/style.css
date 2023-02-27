@@ -154,6 +154,18 @@ box-shadow: 2px 2px #1f203a;
   margin-left: 1%;
 }
 
+.your-posts {
+margin-bottom: -2%;
+}
+
+.your-comments {
+  margin-bottom: -1.5%;
+  margin-top: 7%;
+}
+
+.your-comments-card {
+  margin-bottom: 1%;
+}
 /* home css */
 a {
   display: block;

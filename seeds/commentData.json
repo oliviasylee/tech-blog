@@ -1,17 +1,17 @@
 [
     {
-        "comment": "Great",
+        "comment": "Great explanation of MVC!",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "comment": "Thanks for sharing this information.",
+        "user_id": 2,
+        "post_id": 2
+    },
+    {
+        "comment": "I particularly appreciate how ORMs make it easier to work with databases in a language-agnostic way.",
         "user_id": 1,
-        "post_id": 1
-    },
-    {
-        "comment": "Nice",
-        "user_id": 2,
-        "post_id": 1
-    },
-    {
-        "comment": "Great",
-        "user_id": 2,
         "post_id": 3
     }
   ]

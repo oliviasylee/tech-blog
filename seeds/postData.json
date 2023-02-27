@@ -1,20 +1,20 @@
 [
     {
       "id": 1,
-      "title": "MVC",
-      "contents": "Pattern in software design commonly used to implement user interfaces, data, and controlling logic.",
+      "title": "What is MVC and why it is used?",
+      "contents": "MVC (Model-View-Controller) is a pattern in software design commonly used to implement user interfaces, data, and controlling logic.",
       "user_id": 1
     },
     {
       "id": 2,
-      "title": "Object-oriented programming (OOP)",
-      "contents": "Computer programming model that organizes software design around data, or objects, rather than functions and logic.",
+      "title": "What are the 4 basics of OOP?",
+      "contents": "Abstraction, Encapsulation, Inheritance, and Polymorphism",
       "user_id": 1
     },
     {
       "id": 3,
-      "title": "Object Relational Mapping (ORM)",
-      "contents": "Technique used in creating a 'bridge' between object-oriented programs and, in most cases, relational databases. Put another way, you can see the ORM as the layer that connects object oriented programming (OOP) to relational databases",
+      "title": "How does ORM work?",
+      "contents": "ORMs generate objects which map to tables in the database virtually. Once these objects are up, then coders can easily work to retrieve, manipulate or delete any field from the table without paying much attention to language specifically.",
       "user_id": 2
     }
   ]
