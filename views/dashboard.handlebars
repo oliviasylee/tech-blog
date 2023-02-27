@@ -1,5 +1,5 @@
 <div class="container welcome">
-  <div class="col-auto  ">
+  <div class="col-auto">
     <h4>Welcome, {{user.username}}!</h4>
   </div>
   <header>
@@ -7,20 +7,39 @@
   </header>
 </div>
 
+{{!-- <div class="container">
+{{#if posts.length}}
+    {{#each posts as |post|}}
+        {{> post-info post}}
+            <a href="dashboard/edit/{{post.id}}">
+             <button class="btn edit-button btn-outline-dark btn-dark btn-lg px-5" type="button"><i class="fa-regular fa-pen-to-square"></i> Edit Post</button></a>
+    {{/each}}
+</div>
+
+{{else}}
+<h4>You currently do not have any posts</h4>
+{{/if}}
+</div> --}}
+
 <div class="container">
   {{#each posts as |post|}}
 <div class="card">
   <div class="card-header">
-    <h3><a href="/posts/{{id}}">{{post.title}}</a></h3>
+    <div class="d-flex justify-content-between">
+      <h3><a href="/posts/{{id}}">{{post.title}}</a></h3> 
+      <u><a href="dashboard/edit/{{post.id}}"> Edit Post</a></u>
+    </div>
+        {{!-- <button class="btn edit-button btn-outline-dark btn-dark btn-lg px-5 float-end" type="button"><i class="fa-regular fa-pen-to-square"></i> </button>--}}
   </div>
   <div class="card-body">
     <h5>{{post.contents}}</h5>
     <br>Posted by {{user.username}} on {{format_date createdAt}}
+    
   </div>
 </div>
 {{/each}}
 </div>
 
 <div class="flex-container">
-  <a href="dashboard/newpost" class="btn-new-post btn-outline-dark btn-dark btn-lg px-5"><i class="fa-solid fa-plus"></i> New Post</a>
+  <a href="/dashboard/newpost" class="btn-new-post btn-outline-dark btn-dark btn-lg px-5"><i class="fa-solid fa-plus"></i> New Post</a>
 </div>

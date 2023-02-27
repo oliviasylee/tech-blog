@@ -20,7 +20,7 @@ router.get('/', withAuth, async(req, res) => {
                 'title',
                 'contents',
                 'user_id',
-                'createdAt',
+                'created_at',
             ],
             include: [
                 {
@@ -40,27 +40,46 @@ router.get('/', withAuth, async(req, res) => {
     }
 });
 
-
-// router.get('/dashboard', withAuth, async(req, res) => {
-//         try {
-//             const userData = await User.findByPk(req.session.user_id, {
-//                 include: [{ model: Post }]
-//         });
-
-//         const user = userData.get({ plain: true });
-//         console.log(user);
-
-//         res.render('dashboard', {
-//             user,
-//             logged_in: req.session.logged_in, })
-//         } catch (err) {
-//             console.log(err)
-//             res.status(500).json(err)
-//         }
-    
-// });
-
-// Route to create a new post by the user
+router.get('/edit/:id', withAuth, async (req, res) => {
+    try {
+      const postData = await Post.findOne({
+        where: {
+          id: req.params.id,
+        },
+        attributes: ['id', 'title', 'contents', 'created_at'],
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+          {
+            model: Comment,
+            attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
+            include: {
+              model: User,
+              attributes: ['username'],
+            },
+          },
+        ],
+      });
+  
+      if (!postData) {
+        res.status(404).json({ message: 'No post found with this id' });
+        return;
+      }
+  
+      const post = postData.get({ plain: true });
+      res.render('editpost', {
+        post,
+        logged_in: true,
+        username: req.session.username,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
 router.get('/newpost', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({
@@ -72,7 +91,7 @@ router.get('/newpost', withAuth, async (req, res) => {
                 'title',
                 'contents',
                 'user_id',
-                'createdAt',
+                'created_at',
             ],
             include: [
                 {

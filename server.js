@@ -18,7 +18,6 @@ const sess = {
     secret: process.env.SECRET,
     cookie: {
       maxAge: 30 * 60 * 1000, // expires after 30 mins
-      // expires after 1 day maxAge: 24 * 60 * 60 * 1000,
     },
     resave: false,
     saveUninitialized: true,
