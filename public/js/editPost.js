@@ -1,9 +1,7 @@
 const editPostFormHandler = async (event) => {
     event.preventDefault();
-    console.log("commentFormHandler called"); 
-  
+    
     const id = window.location.pathname.split('/').pop();
-
     const title = document.querySelector('#typeTitle').value.trim();
     const contents = document.querySelector('#typeContents').value.trim();
 

@@ -19,9 +19,27 @@
   <div class="card-body">
     <h5>{{post.contents}}</h5>
     <br>Posted by {{user.username}} on {{format_date created_at}}
-    
   </div>
 </div>
+{{/each}}
+</div>
+
+<div class="container welcome">
+<header>
+    <h1><a href="/dashboard">Your Comments</a></h1>
+  </header>
+</div>
+
+<div class="container">
+  {{#each comments as |comment|}}
+    <div class="card"> 
+      <div class="card-body">
+        <div class="d-flex justify-content-between">
+          <h3><a href="/comments/{{id}}">{{comment.comment}}</a></h3> <u><a href="dashboard/editcomment/{{comment.id}}"> Edit Comment</a></u>
+      </div>
+      <br>- {{user.username}} on {{format_date created_at}}
+      </div>
+    </div>
 {{/each}}
 </div>
 

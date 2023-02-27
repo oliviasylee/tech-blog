@@ -2,23 +2,23 @@
 
 {{> comments post.comments}}
 
-{{#if logged_in}}
+
 <div class="container">
   <div class="card">
     <div class="card-header">
         <h5> Comment </h5>
     </div>
     <div class="card-body">
-      <form class="newComment">
-       <div class="form-group">
+      <form class="newComment" action="/login">
+        <div class="form-group">
             <textarea class="form-control" id="typeComment" rows="2"></textarea>
         </div>
+    
         <button class="btn btn-outline-dark btn-dark btn-lg px-5" type="submit">Submit</button>
-        </form>
+      </form>
     </div>
   </div>
 </div>
-{{/if}}
 
 {{#if logged_in}}
 <script src="/js/comment.js"></script>

@@ -1,9 +1,8 @@
 <div class="container">
     {{#each this}}
   <div class="card">
- 
     <div class="card-body">
-      {{comment}} <br>
+     <a href="/comments/{{id}}"> {{comment}}</a> <br>
       - {{user.username}} on {{format_date created_at}}
     </div>
   </div>
