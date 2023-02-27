@@ -1,1 +1,51 @@
 # Tech blog
+## Description
+The application is a tech blog where developers can create an account, log in, publish posts, and leave comments on each post. They can also manage their posts and comments using a dashboard, which allows updating or deleting them. The application follows the MVC design pattern and connects to a MySQL database for models using MySQL and Sequelize. It uses handlebars.js for HTML view templates and express.js for controllers. Additionally, it utilizes cookies and session data to restrict the publishing of posts and comments to authenticated users.
+## Table of Contents
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Application Preview](#ApplicationPreview)
+- [Video Walkthrough](#VideoWalkthrough)
+- [Questions](#Questions)
+## Installation
+1. Clone this repository.
+```
+git clone git@github.com:oliviasylee/e-commerce-backend.git
+```
+
+2. Run ‘npm install’ from the terminal at the root directory of the local repository to install the required packages.
+```
+npm i
+```
+
+## Usage
+Live HEROKU application deployed at: [Click here]() <br>
+## Application Preview
+
+Home
+![Homepage](/public/images/home.png)
+
+Post page
+![singlepate](/public/images/singlepage.png)
+
+Login & Join Page
+| Login | Join|
+|-----------|-----------|
+| ![Login](/public/images/login.png)|![Join](/public/images/join.png)|
+
+
+Logged in user feature:
+| Dashboard | Create new post|
+|-----------|-----------|
+| ![Dashboard](/public/images/dashboard.png)|![Create-new-post](/public/images/create-new-post.png)|
+
+| Edit post | Edit comment|
+|-----------|-----------|
+| ![Edit-post](/public/images/edit-post.png)| ![Edit-comment](/public/images/edit-comment.png)|
+
+## Video Walkthrough
+Here is a full movie showing how the application works. [Click here]() <br>
+
+## Questions
+If you have any questions about this projects, please contact me at oliviasylee@Gmail.com. You can view more of my projects at https://github.com/oliviasylee.
