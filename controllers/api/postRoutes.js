@@ -69,7 +69,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create new post
+// Create a new post
 router.post('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.create({

@@ -34,6 +34,6 @@ Comment.belongsTo(Post, {
     foreignKey: 'post_id',
 });
 
-// Note that Comment does not have a "has many" relationship with User, as each comment is associated with only one post and therefore one user.
+// Comment does not have a "has many" relationship with User, as each comment is associated with only one post and therefore one user
 
 module.exports = { User, Post, Comment };

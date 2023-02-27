@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Dashboard route for a logged in user
+// Dashboard route for a logged-in user
 router.get('/', withAuth, async(req, res) => {
   try {
       const userData = await User.findByPk(req.session.user_id, {
@@ -146,7 +146,7 @@ router.get('/editcomment/:id', withAuth, async (req, res) => {
   }
 });
 
-// Create a new post by author
+// Create a new post by a logged-in user
 router.get('/newpost', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({

@@ -74,11 +74,9 @@ router.get('/posts/:id', async (req, res) => {
 // Login route
 router.get('/login', async(req, res) => {
     if (req.session.logged_in) {
-        // changed dashboard -> /
         res.redirect('/');
         return;
     }
-    // Otherwise, render the 'login' template
     res.render('login');
 });
 
