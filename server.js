@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 // Set up sessions - something you want to encrypt
 const sess = {
-    secret: process.env.SECRET,
+    secret: 'keyboard cat',
     cookie: {
       maxAge: 30 * 60 * 1000, // Expires after 30 mins
     },
