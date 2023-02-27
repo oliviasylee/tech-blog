@@ -40,6 +40,7 @@ router.get('/', withAuth, async(req, res) => {
     }
 });
 
+// Route to edit a post 
 router.get('/edit/:id', withAuth, async (req, res) => {
     try {
       const postData = await Post.findOne({
@@ -79,7 +80,8 @@ router.get('/edit/:id', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
   });
-  
+
+// Create a new post by author
 router.get('/newpost', withAuth, async (req, res) => {
     try {
         const postData = await Post.findAll({

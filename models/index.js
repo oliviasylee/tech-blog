@@ -5,6 +5,7 @@ const Comment = require('./Comment');
 // User hasmany post
 User.hasMany(Post, {
     foreignKey: 'user_id',
+    onDelete: 'CASCADE',
 });
 
 // User hasmany comment
@@ -20,6 +21,7 @@ Post.belongsTo(User, {
 // Post hasmany comments -> but not vice versa
 Post.hasMany(Comment, {
     foreignKey: 'post_id',
+    onDelete: 'CASCADE',
 });
 
 // Comment belongs to a user

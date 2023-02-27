@@ -1,4 +1,10 @@
-<div class="container new-post">
+<div class="container welcome">
+   <header>
+    <h4><a href="/dashboard"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</h4></a>
+  </header>
+  </div>
+
+  <div class="container">
   <div class="card">
     <div class="card-header">
     <h3>Edit Post</h3>
@@ -6,21 +12,20 @@
     <div class="card-body">
       <form class="editPost">
         <div class="form-group">
-            <label for="exampleFormControlTextarea1"><h5>Title</h5></label>
-            <textarea class="form-control" id="typeTitle" value="{{post.title}}" rows="1"></textarea>
+            <textarea class="form-control" id="typeTitle" rows="1">{{post.title}}</textarea>
         </div>
         <br>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1"><h5>Contents</h5></label>
-            <textarea class="form-control" id="typeContents" value="{{post.contents}}" rows="5"></textarea>
+            <textarea class="form-control" id="typeContents" rows="5">{{post.contents}}</textarea>
         </div>
-          <button class="btn btn-outline-dark btn-dark btn-lg px-5" type="submit">Update Post</button>
-          <button class="btn btn-outline-dark btn-dark btn-lg px-5" type="button">Delete</button>
+          <button class="btn btn-outline-dark btn-dark btn-lg px-5" id="editPost" type="submit">Update Post</button>
+          <button class="btn btn-outline-dark btn-dark btn-lg px-5" id="deleteButton" type="button" id="deletePost">Delete</button>
       </form>
     </div>
+  </div>
   </div>
 </div>
 
 
 <script src="/js/editPost.js"></script>
-{{!-- <script src="/js/deletePost.js"></script> --}}
+<script src="/js/deletePost.js"></script>

@@ -16,31 +16,15 @@ router.post('/', async (req, res) => {
   }
 });
 
-  //   try {
-  //     const userData = await User.create({
-  //       username: req.body.username,
-  //       email: req.body.email,
-  //       password: req.body.password,
-  //     });
-  
-  //     console.log("User data:", userData);
-
-  //     req.session.save(() => {
-  //       req.session.logged_in = true;
-  //       console.log("Session saved.");
-      // res.redirect('/login');
-  //     });
-  //   } catch (err) {
-  //     console.log(err);
-  //     res.status(500).json({ message: 'Failed to create user' });
-  //   }
-  // });
-
 // Login route
 router.post('/login', async (req, res) => {
   try {
       // Find the user who matches the posted e-mail address
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    const userData = await User.findOne({ 
+      where: { 
+        email: req.body.email 
+      }
+    });
 
     if (!userData) {
       res
