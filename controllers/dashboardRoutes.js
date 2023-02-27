@@ -117,7 +117,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 // Route to edit a comment 
 router.get('/editcomment/:id', withAuth, async (req, res) => {
   try {
-    const commentData = await Comment.findAll({
+    const commentData = await Comment.findOne({
       where: {
         id: req.params.id,
       },
@@ -126,25 +126,17 @@ router.get('/editcomment/:id', withAuth, async (req, res) => {
           model: User,
           attributes: ['username'],
         },
-        {
-          model: Comment,
-          attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
-          include: {
-            model: User,
-            attributes: ['username'],
-          },
-        },
       ],
     });
 
-    if (!postData) {
-      res.status(404).json({ message: 'No post found with this id' });
+    if (!commentData) {
+      res.status(404).json({ message: 'No comment found with this id' });
       return;
     }
 
-    const post = postData.get({ plain: true });
-    res.render('editpost', {
-      post,
+    const comment = commentData.get({ plain: true });
+    res.render('editcomment', {
+      comment,
       logged_in: true,
       username: req.session.username,
     });
@@ -153,7 +145,6 @@ router.get('/editcomment/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
 
 // Create a new post by author
 router.get('/newpost', withAuth, async (req, res) => {

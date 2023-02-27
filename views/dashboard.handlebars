@@ -1,12 +1,16 @@
 <div class="container welcome">
+  <div class="d-flex justify-content-between">
   <div class="col-auto">
     <h4>Welcome back, {{user.username}}!</h4>
-  </div>
   <header>
     <h1><a href="/dashboard">Your Posts</a></h1>
   </header>
+  </div>
+  <a href="/dashboard/newpost" class="btn-new-post btn-outline-dark btn-dark btn-lg px-5"><i class="fa-solid fa-plus"></i> New Post</a>
+</div>
 </div>
 
+{{!-- Your posts --}}
 <div class="container">
   {{#each posts as |post|}}
 <div class="card">
@@ -30,19 +34,18 @@
   </header>
 </div>
 
+{{!-- Your commnets --}}
 <div class="container">
   {{#each comments as |comment|}}
     <div class="card"> 
       <div class="card-body">
         <div class="d-flex justify-content-between">
-          <h3><a href="/comments/{{id}}">{{comment.comment}}</a></h3> <u><a href="dashboard/editcomment/{{comment.id}}"> Edit Comment</a></u>
+          {{!-- <h3><a href="/comments/{{id}}">{{comment.comment}}</a></h3>  --}}
+          <h3>{{comment.comment}}</h3> 
+          <u><a href="dashboard/editcomment/{{comment.id}}"> Edit Comment</a></u>
       </div>
-      <br>- {{user.username}} on {{format_date created_at}}
+    <br>- {{user.username}} on {{format_date created_at}}
       </div>
     </div>
 {{/each}}
-</div>
-
-<div class="flex-container">
-  <a href="/dashboard/newpost" class="btn-new-post btn-outline-dark btn-dark btn-lg px-5"><i class="fa-solid fa-plus"></i> New Post</a>
 </div>

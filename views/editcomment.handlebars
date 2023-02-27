@@ -6,13 +6,16 @@
     <div class="card-body">
       <form class="editComment">
             <div class="form-group">
-                <textarea class="form-control" id="typeTitle" rows="1">{{comment}}</textarea>
+                <textarea class="form-control" id="typeComment" rows="1">{{comment.comment}}</textarea>
             </div>
+            
             <button class="btn btn-outline-dark btn-dark btn-lg px-5" id="editComment" type="submit">Update</button>
-            <button class="btn btn-outline-dark btn-dark btn-lg px-5" id="deleteButton" type="button" id="deleteComment">Delete</button>
+            
+            <button class="btn btn-outline-dark btn-dark btn-lg px-5" type="button" id="deleteComment">Delete</button>
        </form>
       </div>
     </div>
 </div>
 
 <script src="/js/editComment.js"></script>
+<script src="/js/deleteComment.js"></script>
