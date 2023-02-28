@@ -23,19 +23,19 @@ npm i
 ## Usage
 Live HEROKU application deployed at: [Click here](https://sleepy-chamber-12554.herokuapp.com/) <br>
 ## Application Preview
-Home
+<strong>Home</strong>
 ![Homepage](/public/images/home.png)
 
-Post page
+<strong>Post page</strong>
 ![singlepate](/public/images/singlepage.png)
 
-Login & Join Page
+<strong>Login & Join Page</strong>
 | Login | Join|
 |-----------|-----------|
 | ![Login](/public/images/login.png)|![Join](/public/images/join.png)|
 
 
-Logged in user feature:
+<strong>Logged in user feature:</strong>
 | Dashboard | Create new post|
 |-----------|-----------|
 | ![Dashboard](/public/images/dashboard.png)|![Create-new-post](/public/images/create-new-post.png)|
