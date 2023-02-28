@@ -21,7 +21,7 @@ npm i
 ```
 
 ## Usage
-Live HEROKU application deployed at: [Click here](https://sleepy-chamber-12554.herokuapp.com/) <br>
+Live HEROKU application deployed at: [Click here](https://mysterious-dawn-25917.herokuapp.com/) <br>
 ## Application Preview
 <strong>Home</strong>
 ![Homepage](/public/images/home.png)
