@@ -36,9 +36,7 @@ app.set('view engine', 'handlebars');
 // Set up middleware for the Express app
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public'), { type: 'application/javascript' }));
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Use the Router object to handle requests
 app.use(routes);
