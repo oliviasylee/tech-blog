@@ -6,8 +6,8 @@ The application follows the MVC design pattern and connects to a MySQL database 
 - [Description](#Description)
 - [Installation](#Installation)
 - [Usage](#Usage)
-- [Application Preview](#ApplicationPreview)
-- [Video Walkthrough](#VideoWalkthrough)
+- [Application Preview](#Application-preview)
+- [Video Walkthrough](#Video-walkthrough)
 - [Questions](#Questions)
 ## Installation
 1. Clone this repository.
@@ -19,6 +19,7 @@ git clone git@github.com:oliviasylee/tech-blog.git
 ```
 npm i
 ```
+
 ## Usage
 Live HEROKU application deployed at: [Click here](https://sleepy-chamber-12554.herokuapp.com/) <br>
 ## Application Preview
