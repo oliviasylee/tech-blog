@@ -1,6 +1,7 @@
 # Tech blog
 ## Description
-The application is a tech blog where developers can create an account, log in, publish posts, and leave comments on each post. They can also manage their posts and comments using a dashboard, which allows updating or deleting them. The application follows the MVC design pattern and connects to a MySQL database for models using MySQL and Sequelize. It uses handlebars.js for HTML view templates and express.js for controllers. Additionally, it utilizes cookies and session data to restrict the publishing of posts and comments to authenticated users.
+The application is a tech blog where developers can create an account, log in, publish posts, and leave comments on each post. They can also manage their posts and comments using a dashboard, which allows updating or deleting them. <br>
+The application follows the MVC design pattern and connects to a MySQL database for models using MySQL and Sequelize. It uses handlebars.js for HTML view templates and express.js for controllers. Additionally, it utilizes cookies and session data to restrict the publishing of posts and comments to authenticated users.
 ## Table of Contents
 - [Description](#Description)
 - [Installation](#Installation)
@@ -11,18 +12,16 @@ The application is a tech blog where developers can create an account, log in, p
 ## Installation
 1. Clone this repository.
 ```
-git clone git@github.com:oliviasylee/e-commerce-backend.git
+git clone git@github.com:oliviasylee/tech-blog.git
 ```
 
 2. Run ‘npm install’ from the terminal at the root directory of the local repository to install the required packages.
 ```
 npm i
 ```
-
 ## Usage
-Live HEROKU application deployed at: [Click here]() <br>
+Live HEROKU application deployed at: [Click here](https://sleepy-chamber-12554.herokuapp.com/) <br>
 ## Application Preview
-
 Home
 ![Homepage](/public/images/home.png)
 
