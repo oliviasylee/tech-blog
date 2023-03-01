@@ -45,7 +45,7 @@ Live HEROKU application deployed at: [Click here](https://mysterious-dawn-25917.
 | ![Edit-post](/public/images/edit-post.png)| ![Edit-comment](/public/images/edit-comment.png)|
 
 ## Video Walkthrough
-Here is a full movie showing how the application works. [Click here]() <br>
+Here is a full movie showing how the application works. [Click here](https://drive.google.com/file/d/1AW3gswKN0z3P6Sz7abkLAO5CFfI0d06t/view) <br>
 
 ## Questions
 If you have any questions about this projects, please contact me at oliviasylee@Gmail.com. You can view more of my projects at https://github.com/oliviasylee.
